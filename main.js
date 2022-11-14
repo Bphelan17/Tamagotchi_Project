@@ -40,9 +40,24 @@ const tamagotchiSleep = {
     }
 }
 
+const tamagotchiBoredom = {
+    boredom: 0,
+    start() {
+        const boredomLevel = setInterval( () => {
+            this.boredom++
+            console.log(this.boredom)
+            if(this.bordedom === 10) {
+                console.log('Your Pet Died!')
+                clearInterval(boredomLevel)
+            }
+        }, 10000);
+    }
+}
+
 console.log(tamagotchiAge.start())
 console.log(tamagotchiHunger.start())
 console.log(tamagotchiSleep.start())
+console.log(tamagotchiBoredom.start())
 
    
 
