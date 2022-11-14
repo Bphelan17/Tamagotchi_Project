@@ -1,17 +1,31 @@
-/* img {
+img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-} */
+}
 
-body {
+/* body {
     height: 200vh;
     display: flex;
     flex-direction: column;
 
+} */
+
+h1 {
+    text-align: center;
+    color: orangered;
 }
 
 h2 {
-    text-align: right;
+    text-align: center;
+    color: rgb(51, 29, 7);
 }
+
+h3 {
+    text-align: center;
+    color: orangered
+}
+
+
+
