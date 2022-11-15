@@ -1,4 +1,6 @@
 
+
+
 const btnStart = document.querySelector("#btn-start")
 btnStart.addEventListener('click', handleStartClick)
 
@@ -11,19 +13,22 @@ function handleStartClick() {
 
 const showAge = document.querySelector("#AgeCounter");
 
-const tamagotchiAge = {
-    age: 0,
-    start() {
+const tamagotchiAge = () => {
+    age = 0
+    function start() {
         const timeAge = setInterval( () => {
             showAge.textContent = this.age++
             console.log(this.age)
             if(this.age === 101) {
-                console.log('Your Pet Died!')
                 clearInterval(timeAge)
+                deathMessage.textContent = 'Your Pet Died!!!'
             }
-        }, 500);
+        }, 45000);
     }
+    start()
+    
 }
+tamagotchiAge()
 
 const deathMessage = document.querySelector("#pet-dead")
 
@@ -40,7 +45,7 @@ const tamagotchiHunger = () => {
                 clearInterval(hungerLevel)
                 deathMessage.textContent = 'Your Pet Died!!!'
             }
-        }, 100);
+        }, 10000);
     }
     function fixHunger () {
         showHunger.textContent = this.hunger--
@@ -61,7 +66,7 @@ tamagotchiHunger()
 
 
 
-function handleStartClick() {
+function fixHunger() {
     // console.log('you have fed your pet')
 }
 
@@ -70,24 +75,31 @@ function handleStartClick() {
 
 const showSleep = document.querySelector("#Sleep")
 
-const tamagotchiSleep = {
-    sleepiness: 0,
-    start() {
+const tamagotchiSleep = () => {
+    sleepiness = 0
+    function start() {
         const sleepLevel = setInterval( () => {
             showSleep.textContent = this.sleepiness++
             console.log(this.sleepiness)
             if(this.sleepiness === 11) {
-                console.log('Your Pet Died!')
                 clearInterval(sleepLevel)
+                deathMessage.textContent = 'Your Pet Died!!!'
             }
         }, 10000);
     }
+    function fixSleep () {
+        showSleep.textContent = this.sleepiness--
+    }
+    start()
+    fixSleep()
+    const btnSleep = document.querySelector("#btn-sleeper")
+    btnSleep.addEventListener('click', fixSleep)
 }
+tamagotchiSleep()
 
-const btnSleep = document.querySelector("#btn-sleeper")
-btnSleep.addEventListener('click', handleStartClick)
 
-function handleStartClick() {
+
+function fixSleep() {
     // console.log('Your pet is sleeping, shhhh')
 }
 
