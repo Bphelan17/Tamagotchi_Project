@@ -26,10 +26,19 @@ h3 {
     color: orangered
 }
 
+header {
+    text-align: center;
+}
+
 #Hunger {
     font-family: cursive;
     color: orangered;
     
+}
+
+#pet-dead {
+    text-align: center;
+    font-size: x-large;
 }
 
 #Sleep {
