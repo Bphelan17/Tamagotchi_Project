@@ -25,10 +25,9 @@ const tamagotchiAge = () => {
                 clearInterval(timeAge)
                 deathMessage.textContent = 'Your Pet Died!!!'
             }
-        }, 45000);
+        }, 20000);
     }
     start()
-    
 }
 tamagotchiAge()
 
@@ -57,6 +56,7 @@ const tamagotchiHunger = () => {
     const btnFeed = document.querySelector("#btn-feeder")
     btnFeed.addEventListener('click', fixHunger)
 }
+
 tamagotchiHunger()
 
 
@@ -80,7 +80,7 @@ const tamagotchiSleep = () => {
         const sleepLevel = setInterval( () => {
             showSleep.textContent = this.sleepiness++
             console.log(this.sleepiness)
-            if(this.sleepiness === 11) {
+            if(this.sleepiness === 10) {
                 clearInterval(sleepLevel)
                 deathMessage.textContent = 'Your Pet Died!!!'
             }
@@ -111,7 +111,7 @@ const tamagotchiBoredom = () => {
         const boredomLevel = setInterval( () => {
             showBoredom.textContent = this.boredom++
             console.log(this.boredom)
-            if(this.bordedom === 11) {
+            if(this.boredom === 11) {
                 clearInterval(boredomLevel)
                 deathMessage.textContent = 'Your Pet Died!!!'
             }
@@ -134,10 +134,7 @@ function fixBoredom() {
 
 
 
-// console.log(tamagotchiAge.start())
-// console.log(tamagotchiHunger.start())
-// console.log(tamagotchiSleep.start())
-// console.log(tamagotchiBoredom.start())
+
 
 
    
