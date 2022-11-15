@@ -5,12 +5,13 @@ img {
     width: 50%;
 }
 
-/* body {
+body {
     height: 200vh;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
+    background-color: rgb(142, 138, 136);
 
-} */
+}
 
 h1 {
     text-align: center;
@@ -24,6 +25,23 @@ h2 {
 
 h3 {
     text-align: center;
+    color: orangered
+}
+
+.Hunger {
+    font-family: cursive;
+    color: orangered;
+    
+}
+
+.Sleep {
+    font-family: cursive;
+    color: rgb(51, 29, 7);
+    font-style: bold;
+}
+
+.Boredom {
+    font-family: cursive;
     color: orangered
 }
 
