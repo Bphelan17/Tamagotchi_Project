@@ -7,8 +7,6 @@ img {
 
 body {
     height: 200vh;
-    /* display: flex;
-    flex-direction: column; */
     background-color: rgb(142, 138, 136);
 
 }
@@ -28,19 +26,19 @@ h3 {
     color: orangered
 }
 
-.Hunger {
+#Hunger {
     font-family: cursive;
     color: orangered;
     
 }
 
-.Sleep {
+#Sleep {
     font-family: cursive;
     color: rgb(51, 29, 7);
     font-style: bold;
 }
 
-.Boredom {
+#Boredom {
     font-family: cursive;
     color: orangered
 }

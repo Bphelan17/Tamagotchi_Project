@@ -1,24 +1,39 @@
+
+const btnStart = document.querySelector("#btn-start")
+btnStart.addEventListener('click', handleStartClick)
+
+function handleStartClick() {
+    console.log('the game has started')
+}
+
+
+
+
+const showAge = document.querySelector("#AgeCounter");
+
 const tamagotchiAge = {
     age: 0,
     start() {
         const timeAge = setInterval( () => {
-            this.age++
+            showAge.textContent = this.age++
             console.log(this.age)
-            if(this.age === 100) {
+            if(this.age === 101) {
                 console.log('Your Pet Died!')
                 clearInterval(timeAge)
             }
-        }, 50000);
+        }, 60000);
     }
 }
+
+const showHunger = document.querySelector("#Hunger")
 
 const tamagotchiHunger = {
     hunger: 0,
     start() {
         const hungerLevel = setInterval( () => {
-            this.hunger++
+            showHunger.textContent = this.hunger++
             console.log(this.hunger)
-            if(this.hunger === 10) {
+            if(this.hunger === 11) {
                 console.log('Your Pet Died!')
                 clearInterval(hungerLevel)
             }
@@ -26,13 +41,25 @@ const tamagotchiHunger = {
     }
 }
 
+const btnFeed = document.querySelector("#btn-feeder")
+btnFeed.addEventListener('click', handleStartClick)
+
+function handleStartClick() {
+    console.log('you have fed your pet')
+}
+
+
+
+
+const showSleep = document.querySelector("#Sleep")
+
 const tamagotchiSleep = {
     sleepiness: 0,
     start() {
         const sleepLevel = setInterval( () => {
-            this.sleepiness++
+            showSleep.textContent = this.sleepiness++
             console.log(this.sleepiness)
-            if(this.sleepiness === 10) {
+            if(this.sleepiness === 11) {
                 console.log('Your Pet Died!')
                 clearInterval(sleepLevel)
             }
@@ -40,13 +67,23 @@ const tamagotchiSleep = {
     }
 }
 
+const btnSleep = document.querySelector("#btn-sleeper")
+btnSleep.addEventListener('click', handleStartClick)
+
+function handleStartClick() {
+    console.log('Your pet is sleeping, shhhh')
+}
+
+
+const showBoredom = document.querySelector("#Boredom")
+
 const tamagotchiBoredom = {
     boredom: 0,
     start() {
         const boredomLevel = setInterval( () => {
-            this.boredom++
+            showBoredom.textContent = this.boredom++
             console.log(this.boredom)
-            if(this.bordedom === 10) {
+            if(this.bordedom === 11) {
                 console.log('Your Pet Died!')
                 clearInterval(boredomLevel)
             }
@@ -54,10 +91,20 @@ const tamagotchiBoredom = {
     }
 }
 
+const btnPlayTime = document.querySelector("#btn-play")
+btnPlayTime.addEventListener('click', handleStartClick)
+
+function handleStartClick() {
+    console.log('Your pet is wagging their tail and fetching the ball')
+}
+
+
+
 console.log(tamagotchiAge.start())
 console.log(tamagotchiHunger.start())
 console.log(tamagotchiSleep.start())
 console.log(tamagotchiBoredom.start())
+
 
    
 

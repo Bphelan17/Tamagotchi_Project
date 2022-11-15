@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/main.js"></script>
+    <script src="main.js" defer></script>
     <link rel="stylesheet" href="main.css">
     <title>Tamagotchi Project</title>
 </head>
@@ -12,21 +12,25 @@
 
 <body>
     <h1>Tamagotchi Game</h1>
+    <header>Dont let values get to 10 or Bye Bye Brownie The Elf</header>
     <h2>Pet Name: Brownie The Elf</h2>
     <div id="Pet">
         <img src="https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/browns/gp6lymgnko8zcd5rydij" width="250" height="250">
     </div>
-          <h3>Age: 0</h3>  
-        <p class="Hunger">Hunger Level: 1</p>
-          <button class="btn-feeder">Feed-Time</button>
+          <h3 id="AgeCounter">Age: 0</h3>  
+        
+        <p id ="startBtn">Have Fun!</p>
+        <button id="btn-start">Start</button>
+          <p id="Hunger">Hunger Level: 1</p>
+          <button id="btn-feeder">Feed-Time</button>
      
 
-          <p class="Sleep">Sleepiness Level: 1</p>
-            <button class="btn-sleeper">Bed-Time</button>
+          <p id="Sleep">Sleepiness Level: 1</p>
+            <button id="btn-sleeper">Bed-Time</button>
           
         
-          <p class="Boredom">Boredom Level: 1</p>
-            <button class="btn-play">Play-Time</button>
+          <p id="Boredom">Boredom Level: 1</p>
+            <button id="btn-play">Play-Time</button>
           
 
 
