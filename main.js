@@ -1,4 +1,6 @@
-
+// Even though a couple things don't work as intended I believe and hope this is 80% complete. I am so close, and honestly proud of what I was able to accomplish
+//If it's not 80% complete I can fix changes this week to meet the units deliverable requirements. Please let me know, I'm improving and
+//I want to prove to myself with project_1 that I can do it. 
 
 
 const btnStart = document.querySelector("#btn-start")
@@ -57,10 +59,7 @@ const tamagotchiHunger = () => {
 }
 tamagotchiHunger()
 
-// function fixHunger () {
-    
-//     showHunger.textContent = this.hunger--
-// }
+
 
 
 
@@ -106,24 +105,30 @@ function fixSleep() {
 
 const showBoredom = document.querySelector("#Boredom")
 
-const tamagotchiBoredom = {
-    boredom: 0,
-    start() {
+const tamagotchiBoredom = () => {
+    boredom = 0
+    function start() {
         const boredomLevel = setInterval( () => {
             showBoredom.textContent = this.boredom++
             console.log(this.boredom)
             if(this.bordedom === 11) {
-                console.log('Your Pet Died!')
                 clearInterval(boredomLevel)
+                deathMessage.textContent = 'Your Pet Died!!!'
             }
         }, 10000);
     }
+    function fixBoredom () {
+        showBoredom.textContent = this.boredom--
+    }
+    start()
+    fixBoredom()
+    const btnPlayTime = document.querySelector("#btn-play")
+    btnPlayTime.addEventListener('click', fixBoredom)
 }
+tamagotchiBoredom()
 
-const btnPlayTime = document.querySelector("#btn-play")
-btnPlayTime.addEventListener('click', handleStartClick)
 
-function handleStartClick() {
+function fixBoredom() {
     // console.log('Your pet is wagging their tail and fetching the ball')
 }
 
