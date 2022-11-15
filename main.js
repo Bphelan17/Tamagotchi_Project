@@ -80,7 +80,7 @@ const tamagotchiSleep = () => {
         const sleepLevel = setInterval( () => {
             showSleep.textContent = this.sleepiness++
             console.log(this.sleepiness)
-            if(this.sleepiness === 10) {
+            if(this.sleepiness === 11) {
                 clearInterval(sleepLevel)
                 deathMessage.textContent = 'Your Pet Died!!!'
             }
